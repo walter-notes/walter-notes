@@ -25,6 +25,4 @@ def get_page_content(page_id):
     tags = comprehend.get_NER_tags(content)
     logger.info("NER info fetched from AWS API " + str(tags))
     mongo.store_page(page_id, tags)
-
-    
     return str(tags)
