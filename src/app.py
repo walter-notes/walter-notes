@@ -12,7 +12,7 @@ import mongo
 
 app = Flask(__name__)
 logger = logging.getLogger(__name__)
-
+logging.basicConfig(filename='myapp.log', level=logging.INFO)
 @app.route("/page/<page_id>")
 def get_page_content(page_id):
     
